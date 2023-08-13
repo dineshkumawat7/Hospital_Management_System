@@ -70,7 +70,7 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-6">
-								<label>Gender</label> <select class="form-control" name="gender"
+								<label class="form-label">Gender</label> <select class="form-control" name="gender"
 									required>
 									<option value="male">Male</option>
 									<option value="female">Female</option>

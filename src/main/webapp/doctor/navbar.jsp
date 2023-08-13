@@ -1,5 +1,8 @@
 
 
+<%@page import="com.entity.Doctor"%>
+<%@page import="com.db.DBConnect"%>
+<%@page import="com.dao.DoctorDao"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false"%>
 
@@ -27,7 +30,11 @@
 						<i class="fas fa-user-circle"></i> ${doctorObj.fullName }
 					</button>
 					<ul class="dropdown-menu" area-labelledby="dropdownMenuButton1">
-						<li><a class="dropdown-item" href="profile.jsp">Edit
+
+						<%
+						Doctor doc = (Doctor)session.getAttribute("doctorObj");
+						%>
+						<li><a class="dropdown-item" href="profile.jsp?id=<%= doc.getId()%>">Edit
 								Profile</a></li>
 						<li><a class="dropdown-item" href="../doctorLogout">Logout</a></li>
 					</ul>
